@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Deploy New Squad Server</h2>
+    <form method="post">
+        <div>
+            <label for="server_name">Server Name:</label>
+            <input type="text" id="server_name" name="server_name" value="{{ server_name or '' }}" required>
+            <small>A unique name for this server instance (e.g., server1). Used for directories and screen session. Avoid spaces/special chars.</small>
+        </div>
+        <div>
+            <label for="base_path">Base Installation Path:</label>
+            <input type="text" id="base_path" name="base_path" value="{{ base_path or '' }}" required>
+            <small>Absolute path where SteamCMD and server directories will be created (e.g., /home/user/sqp_servers).</small>
+        </div>
+        <div>
+            <label for="server_port">Game Port:</label>
+            <input type="number" id="server_port" name="server_port" value="{{ server_port or '7787' }}" required>
+            <small>Default: 7787</small>
+        </div>
+         <div>
+            <label for="query_port">Query Port:</label>
+            <input type="number" id="query_port" name="query_port" value="{{ query_port or '27165' }}" required>
+            <small>Default: 27165</small>
+        </div>
+        <div>
+            <label for="max_players">Max Players:</label>
+            <input type="number" id="max_players" name="max_players" value="{{ max_players or '80' }}" required>
+            <small>Maximum player slots (e.g., 80 or 100). Corresponds to FIXEDMAXPLAYERS.</small>
+        </div>
+        <div>
+            <label for="rcon_password">RCON Password:</label>
+            <input type="password" id="rcon_password" name="rcon_password" value="{{ rcon_password or '' }}" required>
+            <small>Password for RCON access.</small>
+        </div>
+        <div>
+            <button type="submit">Deploy Server</button>
+        </div>
+    </form>
+{% endblock %} 

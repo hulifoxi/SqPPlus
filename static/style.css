@@ -1,0 +1,104 @@
+/* Basic styles for SqP+ */
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #666;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* Basic form styling */
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"] {
+    width: 300px; /* Adjust as needed */
+    padding: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+small {
+    display: block;
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 3px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Flash message styling */
+.flashes {
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.flashes li {
+    margin-bottom: 5px;
+}
+
+.flashes .info { /* Corresponds to flash(..., 'info') */
+    border-color: #bee5eb;
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.flashes .error { /* Example for error messages */
+     border-color: #f5c6cb;
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.flashes .success { /* Example for success messages */
+     border-color: #c3e6cb;
+    background-color: #d4edda;
+    color: #155724;
+} 
